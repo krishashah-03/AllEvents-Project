@@ -82,21 +82,5 @@ uvicorn app:app --reload
 
 ---
 
-## 📸 Screenshots
 
-### Welcome Page
-![Welcome![Screenshot 2025-05-01 153127](https://github.com/user-attachments/assets/12f79e4c-4783-49d3-b5ab-452b32146c5a)
-]()
-
-### Genre Selection
-![Genres](https://github.com/your-username/repo/assets/genre-selection.png)
-
-### Home Page with Artists
-![Home](https://github.com/your-username/repo/assets/homepage.png)
-
-### Artist Modal with Recommendations
-![Modal](https://github.com/your-username/repo/assets/artist-modal.png)
-
-
----
 
