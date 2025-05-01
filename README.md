@@ -1,6 +1,6 @@
 # 🎵 Artist Discovery Engine
 
-An AI-powered music artist search and recommendation platform that lets users explore artists, get smart suggestions (even with typos!), and discover related musicians based on genre. Built using **React**, **PHP**, **MySQL**, and **FastAPI**.
+A music artist search and recommendation platform that lets users explore artists, get smart suggestions (even with typos!), and discover related musicians based on genre. Built using **React**, **PHP**, **MySQL**, and **FastAPI**.
 
 ---
 
