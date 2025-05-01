@@ -16,7 +16,7 @@ export default function HomePage() {
 
     const genreQuery = selectedGenres.join(',');
 
-    fetch(`http://localhost/Artist-Discovery-Engine/backend/api/fetch-artists.php?genres=${encodeURIComponent(genreQuery)}`)
+    fetch(`http://localhost/ALLEVENTS-BACKEND/backend/api/fetch-artists.php?genres=${encodeURIComponent(genreQuery)}`)
       .then(res => res.json())
       .then(data => setArtists(data))
       .catch(err => console.error('Error fetching artists:', err));
@@ -25,7 +25,7 @@ export default function HomePage() {
   useEffect(() => {
     const delayDebounce = setTimeout(() => {
       if (search.trim()) {
-        fetch(`http://localhost/Artist-Discovery-Engine/backend/api/test-api.php?q=${encodeURIComponent(search)}`)
+        fetch(`http://localhost/ALLEVENTS-BACKEND/backend/api/test-api.php?q=${encodeURIComponent(search)}`)
           .then(res => res.json())
           .then(data => setArtists(data))
           .catch(err => console.error('Error fetching search results:', err));
@@ -57,7 +57,7 @@ export default function HomePage() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white px-6 py-8 relative">
+    <div className="min-h-screen w-full bg-black text-white px-6 py-8 flex flex-col">
       <motion.div
         initial={{ opacity: 0, filter: 'blur(8px)' }}
         animate={{ opacity: 1, filter: 'blur(0)' }}
@@ -79,28 +79,10 @@ export default function HomePage() {
           placeholder="Search for your favorite artist..."
           className="w-full px-10 py-3 rounded-lg bg-zinc-800 text-white placeholder-gray-400 border border-zinc-700 focus:outline-none focus:ring-2 focus:ring-green-400"
         />
-
-        {search.trim() && artists.length > 0 && (
-          <ul className="absolute z-20 bg-zinc-800 w-full mt-1 rounded-md border border-zinc-700 max-h-60 overflow-y-auto">
-            {artists.map((artist, index) => (
-              <li
-                key={index}
-                onClick={() => {
-                  setSearch(artist.name);
-                  handleArtistClick(artist);
-                }}
-                className="px-4 py-2 hover:bg-zinc-700 cursor-pointer"
-              >
-                {artist.name}
-              </li>
-            ))}
-          </ul>
-        )}
       </div>
 
-
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-        {artists.filter(a => a.name.toLowerCase().includes(search.toLowerCase())).slice(0, 50).map((artist, index) => (
+      <div className="flex-1 w-full max-w-none grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 px-2 md:px-6">
+        {artists.filter(a => a.name.toLowerCase().includes(search.toLowerCase())).slice(0, 150).map((artist, index) => (
           <div
             key={index}
             className="relative rounded-xl overflow-hidden bg-zinc-900 shadow-md hover:scale-105 transition cursor-pointer"

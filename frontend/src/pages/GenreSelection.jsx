@@ -45,10 +45,10 @@ export default function GenreSelection() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#1a1a1a] to-black text-white px-4 py-8">
+    <div className="min-h-screen w-full bg-gradient-to-b from-[#1a1a1a] to-black text-white px-4 py-8 flex flex-col">
       <h1 className="text-3xl md:text-5xl font-bold text-center mb-6">Pick Your Favorite Genres</h1>
       <p className="text-center text-gray-400 mb-8">Choose at least 3 to continue</p>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
+      <div className="flex-1 w-full max-w-none grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 px-2 md:px-6">
         {genres.map(({ name, icon }) => (
           <div
             key={name}

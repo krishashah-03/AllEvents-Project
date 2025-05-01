@@ -11,15 +11,12 @@ function WelcomePage() {
       navigate('/select-genres', { state: { username } });
     }
   };
-  
-
-  
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-[#121212] to-[#000000] text-white font-sans">
-      <div className="text-center p-8 bg-[#1a1a1a] rounded-2xl shadow-lg w-[90%] max-w-md">
-        <h1 className="text-4xl font-bold mb-2">Welcome! </h1>
-        <p className="text-gray-400 mb-6">Start your journey by giving your username</p>
+    <div className="min-h-screen w-full flex items-center justify-center bg-gradient-to-b from-[#121212] to-[#000000] text-white font-sans px-4">
+      <div className="text-center p-8 md:p-10 bg-[#1a1a1a] rounded-2xl shadow-lg w-full max-w-md mx-auto">
+        <h1 className="text-4xl md:text-5xl font-bold mb-3">Welcome!</h1>
+        <p className="text-gray-400 mb-6 text-base md:text-lg">Start your journey by giving your username</p>
 
         <input
           type="text"
@@ -35,7 +32,6 @@ function WelcomePage() {
         >
           Start Exploring
         </button>
-        
       </div>
     </div>
   );
